@@ -126,3 +126,6 @@ function authenticateUser(username, password) {
   
   console.log("Execution stopped after error."); // ✅ This will run because `catch` handled the error
   
+
+
+  
