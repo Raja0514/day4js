@@ -9,7 +9,6 @@ However, if a function does not reference any outer variables, a closure is not 
 // Case 1: Function Without Referencing Outer Variables (No Closure)
 
 function simpleFunction() {
-    
     console.log("Hello, World!");
 }
 
@@ -22,13 +21,9 @@ function simpleFunction() {
 const outerVar = "I am outer";
 
 function capturingFunction() {
-
     console.log(outerVar);
-
 }
-
 //capturingFunction();
-
 //console.dir(capturingFunction);
 
 // create a function that returns another function to explicitly capture a closure.
@@ -41,10 +36,7 @@ function outerFunction(outerVariable) {
     };
 }
 
-const closureInstance = outerFunction("Hello");
-
-//console.log(closureInstance);
-
+//const closureInstance = outerFunction("Hello");
 
 //closureInstance("How are you ?")
 
@@ -57,20 +49,16 @@ const closureInstance = outerFunction("Hello");
 //Place a debugger statement inside the function
 
 function makeCounter() {
-
-    let count = 10;
-
+    let count = 0;
     return function () {
-
          // Pause execution to inspect scope
         return count++;
-
     };
 }
-
-
 const counter = makeCounter();
 
+counter(); // Call it to create the closure
+counter()
 console.log(counter());
 
 console.log(counter());
@@ -86,8 +74,3 @@ console.log(counter());
 console.log(counter());
 
 console.log(counter());
-
-console.log(counter());
-
-console.log(counter());
-
